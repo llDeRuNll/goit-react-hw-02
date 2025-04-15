@@ -1,10 +1,18 @@
-const Options = ({ updateInfo }) => {
+const Options = ({ updateInfo, reset, total, feedbacksData }) => {
   return (
-    <>
-      <button onClick={() => updateInfo("good")}>Good</button>
-      <button onClick={() => updateInfo("neutral")}>Neutral</button>
-      <button onClick={() => updateInfo("bad")}>Bad</button>
-    </>
+    <ul>
+      {feedbacksData.map((item) => {
+        return (
+          <li key={item}>
+            <button onClick={() => updateInfo(item)}>
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </button>
+          </li>
+        );
+      })}
+
+      <li>{total > 0 && <button onClick={() => reset()}>Reset</button>}</li>
+    </ul>
   );
 };
 

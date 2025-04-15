@@ -1,11 +1,17 @@
-const Feedback = ({ count, total }) => {
+const Feedback = ({ countFeedbacks, total, positivePercent }) => {
   return (
-    <>
-      <p>Good:{count.good}</p>
-      <p>Neutral:{count.neutral}</p>
-      <p>Bad:{count.bad}</p>
-      <p>Total:{total}</p>
-    </>
+    <ul>
+      {Object.keys(countFeedbacks).map((item) => {
+        return (
+          <li key={item}>
+            {item.charAt(0).toUpperCase() + item.slice(1)}:
+            {countFeedbacks[item]}
+          </li>
+        );
+      })}
+      <li>Total: {total}</li>
+      <li>Positive: {positivePercent}%</li>
+    </ul>
   );
 };
 
