@@ -4,3 +4,6 @@
   justify-content: center;
   gap: 20px;
 }
+.feedbacksItem {
+  color: rgb(115, 103, 103);
+}

@@ -10,8 +10,8 @@ const Feedback = ({ countFeedbacks, total, positivePercent }) => {
           </li>
         );
       })}
-      <li className={s.feedbacksTotal}>Total: {total}</li>
-      <li className={s.feedbacksPositive}>Positive: {positivePercent}%</li>
+      <li className={s.feedbacksItem}>Total: {total}</li>
+      <li className={s.feedbacksItem}>Positive: {positivePercent}%</li>
     </ul>
   );
 };
