@@ -1,0 +1,30 @@
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.optionItem button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+}
+
+.optionItem button:hover {
+  transform: translateX(8px) translateY(-4px) rotateY(-6deg);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+}
+
+.optionItem button:active {
+  transform: translateX(2px) translateY(1px) rotateY(-2deg);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1) inset;
+}

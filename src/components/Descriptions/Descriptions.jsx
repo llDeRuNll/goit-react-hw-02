@@ -1,3 +1,4 @@
+import s from "./Description.module.css";
 const Descriptions = () => {
   return (
     <div>

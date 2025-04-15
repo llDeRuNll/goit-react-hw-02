@@ -1,9 +1,10 @@
+import s from "./Options.module.css";
 const Options = ({ updateInfo, reset, total, feedbacksData }) => {
   return (
-    <ul>
+    <ul className={s.options}>
       {feedbacksData.map((item) => {
         return (
-          <li key={item}>
+          <li className={s.optionItem} key={item}>
             <button onClick={() => updateInfo(item)}>
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </button>
@@ -11,7 +12,9 @@ const Options = ({ updateInfo, reset, total, feedbacksData }) => {
         );
       })}
 
-      <li>{total > 0 && <button onClick={() => reset()}>Reset</button>}</li>
+      <li className={s.optionItem}>
+        {total > 0 && <button onClick={() => reset()}>Reset</button>}
+      </li>
     </ul>
   );
 };
